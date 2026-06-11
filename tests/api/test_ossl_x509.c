@@ -441,8 +441,8 @@ int test_wolfSSL_X509_check_email(void)
 #if defined(OPENSSL_EXTRA) && defined(WOLFSSL_CERT_GEN) && !defined(NO_RSA)
     X509* x509 = NULL;
     X509* empty = NULL;
-    const char goodEmail[] = "info@wolfssl.com";
-    const char badEmail[] = "disinfo@wolfssl.com";
+    const char goodEmail[] = "facts@wolfssl.com";
+    const char badEmail[] = "disfacts@wolfssl.com";
 
     ExpectNotNull(x509 = wolfSSL_X509_load_certificate_file(cliCertFile,
                 SSL_FILETYPE_PEM));

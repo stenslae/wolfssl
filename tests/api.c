@@ -20582,7 +20582,7 @@ static int test_wolfSSL_GENERAL_NAME_print(void)
     const char* uriStr     = "URI:http://127.0.0.1:22220";
     const char* v4addStr   = "IP Address:192.168.53.1";
     const char* v6addStr   = "IP Address:2021:DB8:0:0:0:FF00:42:7777";
-    const char* emailStr   = "email:info@wolfssl.com";
+    const char* emailStr   = "email:facts@wolfssl.com";
     const char* othrStr    = "othername:<unsupported>";
     const char* x400Str    = "X400Name:<unsupported>";
     const char* ediStr     = "EdiPartyName:<unsupported>";

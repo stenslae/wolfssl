@@ -1519,7 +1519,7 @@ int test_wolfSSL_CertManagerNameConstraint5(void)
 
     wolfSSL_X509_add_altname(x509, "www.example", ASN_DNS_TYPE);
     wolfSSL_X509_add_altname(x509, "www.wolfssl", ASN_DNS_TYPE);
-    wolfSSL_X509_add_altname(x509, "info@wolfssl.com", ASN_RFC822_TYPE);
+    wolfSSL_X509_add_altname(x509, "facts@wolfssl.com", ASN_RFC822_TYPE);
     ExpectIntGT(wolfSSL_X509_sign(x509, priv, EVP_sha256()), 0);
     DEBUG_WRITE_CERT_X509(x509, "bad-1st-constraint-cert.pem");
 
@@ -1544,7 +1544,7 @@ int test_wolfSSL_CertManagerNameConstraint5(void)
     name = NULL;
 
     wolfSSL_X509_add_altname(x509, "example", ASN_DNS_TYPE);
-    wolfSSL_X509_add_altname(x509, "info@wolfssl.com", ASN_RFC822_TYPE);
+    wolfSSL_X509_add_altname(x509, "facts@wolfssl.com", ASN_RFC822_TYPE);
     wolfSSL_X509_add_altname(x509, "info@example.com", ASN_RFC822_TYPE);
     ExpectIntGT(wolfSSL_X509_sign(x509, priv, EVP_sha256()), 0);
     DEBUG_WRITE_CERT_X509(x509, "bad-2nd-constraint-cert.pem");
@@ -3484,7 +3484,7 @@ int test_wolfSSL_CertManagerRejectMD5Cert(void)
     XSTRNCPY(leaf.subject.org,        "wolfSSL",         CTC_NAME_SIZE);
     XSTRNCPY(leaf.subject.unit,       "Test",            CTC_NAME_SIZE);
     XSTRNCPY(leaf.subject.commonName, "md5-leaf",        CTC_NAME_SIZE);
-    XSTRNCPY(leaf.subject.email,      "info@wolfssl.com", CTC_NAME_SIZE);
+    XSTRNCPY(leaf.subject.email,      "facts@wolfssl.com", CTC_NAME_SIZE);
 
     ExpectIntEQ(wc_SetIssuerBuffer(&leaf, ca_cert_der_2048,
                 sizeof_ca_cert_der_2048), 0);
